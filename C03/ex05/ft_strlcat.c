@@ -14,32 +14,29 @@ unsigned int ft_strlen(char *str)
 
 unsigned int    ft_strlcat(char *dest, char *src, unsigned int size)
 {
-    unsigned int dest_len = ft_strlen(dest);
+    unsigned int dest_len;
     unsigned int i;
-    unsigned int j;
 
+    dest_len = ft_strlen(dest);
     i = 0;
-    if (!src || !dest)
-		return (0);
-    if (size <= 0)
-		return (j);
-    while (i < size && src[i] != '\0')
+    while (dest_len < size)
+		dest_len++;
+    while (i + dest_len + 1 < size && src[i])
     {
         dest[dest_len + i] = src[i];
         i++;
     }
-    dest[dest_len + i] = '\0';
-    j = ft_strlen(dest);
-    return (j);
+    if (dest_len != size)
+        dest[dest_len + i] = '\0';
+    return (dest_len + ft_strlen(src));
 }
 
 int main(void)
 {
-    char dst[100] = "1234";
+    char dst[100] = "12345";
     char src[100] = "ABCD";
 
-    printf("Retourne %u\n", ft_strlcat(dst, src, 2));
-    printf("Retourne %lu\n", strlcat(dst, src, 2));
+    printf("Retourne %u\n", ft_strlcat(dst, src, 4));
     printf("dst = %s\n", dst);
     printf("src = %s\n", src);
 
