@@ -12,31 +12,34 @@ unsigned int ft_strlen(char *str)
     return(i);
 }
 
-unsigned int    ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-    unsigned int dest_len;
-    unsigned int i;
+	unsigned int	dsize;
+	unsigned int	i;
 
-    dest_len = ft_strlen(dest);
-    i = 0;
-    while (dest_len < size)
-		dest_len++;
-    while (i + dest_len + 1 < size && src[i])
-    {
-        dest[dest_len + i] = src[i];
-        i++;
-    }
-    if (dest_len != size)
-        dest[dest_len + i] = '\0';
-    return (dest_len + ft_strlen(src));
+	dsize = 0;
+	i = 0;
+	while (dest[dsize] && dsize < size)
+		dsize++;
+	while (src[i] && i + dsize + 1 < size)
+	{
+		dest[dsize + i] = src[i];
+		i++;
+	}
+	if (dsize != size)
+		dest[dsize + i] = '\0';
+	return (dsize + ft_strlen(src));
 }
 
 int main(void)
 {
-    char dst[100] = "12345";
+    char dst[100] = "1234";
     char src[100] = "ABCD";
 
-    printf("Retourne %u\n", ft_strlcat(dst, src, 4));
+    printf("Retourne %u\n", ft_strlcat(dst, src, 50));
+     printf("dst = %s\n", dst);
+     printf("src = %s\n", src);
+    printf("Retourne %lu\n", strlcat(dst, src, 50));
     printf("dst = %s\n", dst);
     printf("src = %s\n", src);
 
