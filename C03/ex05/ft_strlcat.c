@@ -33,13 +33,14 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 
 int main(void)
 {
-    char dst[100] = "1234";
-    char src[100] = "ABCD";
+    char dst[50] = "1234";
+    char dst2[50] = "1234";
+    char src[50] = "ABCD";
 
-    printf("Retourne %u\n", ft_strlcat(dst, src, 50));
+    printf("Retourne %u\n", ft_strlcat(dst, src, 10));
      printf("dst = %s\n", dst);
      printf("src = %s\n", src);
-    printf("Retourne %lu\n", strlcat(dst, src, 50));
+    printf("Retourne %lu\n", strlcat(dst2, src, 10));
     printf("dst = %s\n", dst);
     printf("src = %s\n", src);
 
