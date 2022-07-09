@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Fri Jul 01 14:20:09 2022
+# Make data base, printed on Fri Jul 08 22:25:53 2022
 
 # Variables
 
@@ -61,9 +61,9 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-bd37c2ff-94f1-4e82-858b-a34377caf7d9-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-55b5350c-5884-4599-ba76-c775ad50adc3-sock
 # environment
-VSCODE_CWD = C:\Users\Max\AppData\Local\Programs\Microsoft VS Code
+VSCODE_CWD = C:\Windows\system32
 # environment
 PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\MinGW\bin;C:\Program Files (x86)\Smart Projects\IsoBuster;C:\Program Files\Calibre2\;C:\Program Files\Git\cmd;;C:\Users\Max\AppData\Local\Programs\Microsoft VS Code\bin
 # environment
@@ -85,7 +85,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8144_PPLSYAIRJAEHJSJW
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12428_WDPFTELPVBFSJNJB
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -195,14 +195,14 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 8144
+VSCODE_PID = 12428
 # variable set hash-table stats:
 # Load=92/1024=9%, Rehash=0, Collisions=11/108=10%
 
-# Pattern-specific V 
-ariable Values
+# Pattern-specific Variable Values
 
-# No pattern-specific variable values.
+# No pattern-spe 
+cific variable values.
 
 # Directories
 
@@ -210,19 +210,19 @@ ariable Values
 # C:\ProgramData\Oracle\Java\javapath (key C:/ProgramData/Oracle/Java/javapath, mtime 1529424634): 5 files, no impossibilities.
 # C:\Program Files (x86)\GtkSharp\2.12\bin: could not be stat'd.
 # C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1474534808): 23 files, no impossibilities.
-# . (key c:/Users/Max/Desktop/PiscineMax-master, mtime 1656677893): 18 files, no impossibilities.
+# . (key c:/Users/Max/Desktop/PiscineMax-master, mtime 1656695364): 17 files, no impossibilities.
 # C:\Program Files (x86)\Smart Projects\IsoBuster: could not be stat'd.
 # C:\Program Files (x86)\Common Files\Oracle\Java\javapath (key C:/Program Files (x86)/Common Files/Oracle/Java/javapath, mtime 1598030400): 5 files, no impossibilities.
 # C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1656259299): 8 files, no impossibilities.
 # C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common (key C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common, mtime 1473886664): 10 files, no impossibilities.
 # C:\MinGW\bin (key C:/MinGW/bin, mtime 1497098350): 147 files, no impossibilities.
 # C:\Program Files\Calibre2\ (key C:/Program Files/Calibre2/, mtime 1564422563): 24 files, no impossibilities.
-# C:\Windows (key C:/Windows, mtime 1501692784): 104 files, no impossibilities.
+# C:\Windows (key C:/Windows, mtime 1501692784): 105 files, no impossibilities.
 # C:\Users\Max\AppData\Local\Programs\Microsoft VS Code\bin (key C:/Users/Max/AppData/Local/Programs/Microsoft VS Code/bin, mtime 1656258525): 4 files, no impossibilities.
 # C:\Windows\System32\Wbem (key C:/Windows/System32/Wbem, mtime 1501102628): 157 files, no impossibilities.
-# C:\Windows\system32 (key C:/Windows/system32, mtime 1656570162): 2534 files, no impossibilities.
+# C:\Windows\system32 (key C:/Windows/system32, mtime 1657233971): 2535 files, no impossibilities.
 
-# 3039 files, no impossibilities in 15 directories.
+# 3040 files, no impossibilities in 15 directories.
 
 # Implicit Rules
 
@@ -265,10 +265,7 @@ makefile:
 
 # Not a target:
 GNUmakefile:
-#  Implicit rule search has been  
-make.exe: *** No rule to make target 'all'.  Stop.
-
-done.
+#  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
@@ -281,14 +278,16 @@ done.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 5 (4) / strings = 3019 / storage = 40548 B / avg = 13 B
-# current buf: size = 8174 B / used = 7874 B / count = 570 / avg = 13 B
-# other used: total = 32374 B / count = 2449 / avg = 13 B
-# other free: total = 22 B / max = 10 B / min = 3 B / avg = 5 B
+# strcache buffers: 5 (3) / strings = 3020 / storage = 40576 B / avg = 13 B
+# current buf: size = 8174 B / used = 7925 B / count = 574 / avg = 13 B
+# other used: total = 32402 B / count = 2446 / avg = 13 B
+# other free: total = 45 B / max = 17 B / min = 3 B / avg = 11 B
 
-# strcache performance: lookups = 3062 / hit rate = 1%
+# strcache performance: lookups = 3063 / hit rate = 1%
 # hash-table stats:
-# Load=3019/8192=37%, Rehash=0, Collisions=814/3062=27%
-# Finished Make data base on Fri Jul 01 14:20:09 2022
+# Load=3020/8192=37%, Rehash=0, Collisions=814/3063=27%
+# Finished Make data base on Fri Jul 08 22:25:53 2022
 
  
+make.exe: *** No rule to make target 'all'.  Stop.
+
