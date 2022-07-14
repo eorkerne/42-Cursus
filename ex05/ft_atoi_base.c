@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 
 int ft_atoi(char *str);
@@ -72,7 +73,7 @@ int check_sign_space(char *str)
     }
     return(sign);
 }
-int dec_to_base(int nb, int ns)
+int dec_to_base(int nb, int ns, char *base)
 {
    int temp;
    int remainder;
@@ -190,3 +191,4 @@ int main(void)
 	printf("T8: %d\n", ft_atoi_base("            +----8----++-1235aaa7766", "a123567"));
 	return (0);
 }
+*/

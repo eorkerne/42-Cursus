@@ -1,15 +1,23 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/13 15:24:35 by maarroud          #+#    #+#             */
+/*   Updated: 2022/07/13 17:47:37 by maarroud         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-unsigned int ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-    unsigned int i;
+	unsigned int	i;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return(i);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
@@ -31,18 +39,24 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (dsize + ft_strlen(src));
 }
 
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 int main(void)
 {
-    char dst[50] = "1234";
-    char dst2[50] = "1234";
-    char src[50] = "ABCD";
+	char dst[50] = "1234";
+	char dst2[50] = "1234";
+	char src[50] = "ABCD";
 
-    printf("Retourne %u\n", ft_strlcat(dst, src, 10));
-     printf("dst = %s\n", dst);
-     printf("src = %s\n", src);
-    printf("Retourne %lu\n", strlcat(dst2, src, 10));
-    printf("dst = %s\n", dst);
-    printf("src = %s\n", src);
+	printf("Retourne %u\n", ft_strlcat(dst, src, 10));
+	 printf("dst = %s\n", dst);
+	 printf("src = %s\n", src);
+	printf("Retourne %lu\n", strlcat(dst2, src, 10));
+	printf("dst = %s\n", dst);
+	printf("src = %s\n", src);
 
-    return (0);
+	return (0);
 }
+*/

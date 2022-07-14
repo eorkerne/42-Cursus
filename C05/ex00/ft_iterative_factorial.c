@@ -1,11 +1,32 @@
-int ft_iterative_factorial(int nb)
-{
-    while (nb != (nb * nb))
-    return (ft_iterative_factorial(nb * nb));
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/13 19:42:29 by maarroud          #+#    #+#             */
+/*   Updated: 2022/07/14 11:26:50 by maarroud         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+//#include <stdio.h>
+int	ft_iterative_factorial(int nb)
+{
+	int	i;
+	int	res;
+
+	i = 1;
+	res = 1;
+	if (nb < 0)
+		return (0);
+	while (i <= nb)
+		res *= i++;
+	return (res);
+}
+/*
 int main(void)
 {
-    
-    ft_iterative_factorial(i);
+	printf("%d", ft_iterative_factorial(5));
 }
+*/
