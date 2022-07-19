@@ -1,4 +1,4 @@
-/*
+
 #include <stdio.h>
 
 int ft_atoi(char *str);
@@ -112,7 +112,6 @@ int dec_to_hex(int nb, int ns)
             temp = temp + 48;
         else
             temp = temp + 55;
-        temp
         nb = nb / ns;
     }
     while (temp != 0)

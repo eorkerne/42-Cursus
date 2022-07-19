@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 15:26:52 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/13 15:27:22 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/07/19 09:54:52 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	ft_putstr(char *str)
 {
 	write(1, str, ft_strlen(str));
 }
+
 /*
 int main (void)
 {

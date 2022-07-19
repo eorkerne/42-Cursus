@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 15:29:37 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/13 15:30:42 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/07/19 09:54:48 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	ft_atoi(char *str)
 	}
 	return (sign * nb);
 }
+
 /*
 int main(void)
 {

@@ -6,12 +6,11 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 12:05:28 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/14 15:59:23 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/07/15 09:20:54 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-
 int	ft_recursive_factorial(int nb)
 {
 	if (nb == 0 || nb == 1)

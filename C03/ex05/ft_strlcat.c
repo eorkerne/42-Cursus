@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 15:24:35 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/13 17:47:37 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/07/16 10:32:00 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ int main(void)
 	char dst2[50] = "1234";
 	char src[50] = "ABCD";
 
-	printf("Retourne %u\n", ft_strlcat(dst, src, 10));
+	printf("Retourne %u\n", ft_strlcat(dst, src, 3));
 	 printf("dst = %s\n", dst);
 	 printf("src = %s\n", src);
-	printf("Retourne %lu\n", strlcat(dst2, src, 10));
+	printf("Retourne %lu\n", strlcat(dst2, src, 3));
 	printf("dst = %s\n", dst);
 	printf("src = %s\n", src);
 

@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:42:29 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/14 11:26:50 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/07/15 09:21:06 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	ft_iterative_factorial(int nb)
 		res *= i++;
 	return (res);
 }
+
 /*
 int main(void)
 {
