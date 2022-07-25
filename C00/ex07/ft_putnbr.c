@@ -6,10 +6,10 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:04:38 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/12 08:24:36 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/07/20 13:34:39 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
 
 void	ft_putchar(char c)
 {
@@ -36,9 +36,9 @@ void	ft_putnbr(int nb)
 		}
 	}
 }
-/*
+
 int	main(void)
 {
-    ft_putnbr(2147483647);
+    ft_putnbr(2147483648);
 }
-*/
+

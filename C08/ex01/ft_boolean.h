@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 11:14:24 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/21 15:42:37 by maarroud         ###   ########.fr       */
+/*   Created: 2022/07/25 15:00:20 by maarroud          #+#    #+#             */
+/*   Updated: 2022/07/25 19:11:01 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
 
-int	ft_strlen(char *str)
+# include <unistd.h>
+# define EVEN(nbr) nbr % 2 == 0
+# define EVEN_MSG "I have an even number of arguments."
+# define ODD_MSG "I have an odd number of arguments."
+# define SUCCESS 0
+
+typedef enum e_f_or_t
 {
-	int	i;
+	TRUE = 1,
+	FALSE = 0,
+}	t_bool;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+void	ft_putstr(char *str);
+t_bool	ft_is_even(int nbr);
 
-void	ft_putstr(char *str)
-{
-	write(1, str, ft_strlen(str));
-	write(1, "\n", 1);
-}
-
-int	main(int argc, char **argv)
-{
-	(void) argc;
-	ft_putstr(argv[0]);
-	return (0);
-}
+#endif

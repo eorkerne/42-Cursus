@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 11:14:24 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/21 15:42:37 by maarroud         ###   ########.fr       */
+/*   Created: 2022/07/20 12:42:27 by maarroud          #+#    #+#             */
+/*   Updated: 2022/07/20 20:34:42 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
 
-int	ft_strlen(char *str)
+int	ft_find_next_prime(int nb)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	nb_us;
 
-	i = 0;
-	while (str[i])
+	nb_us = nb;
+	i = 2;
+	if (nb <= 2)
+		return (2);
+	else if (nb == 3)
+		return (3);
+	while ((i * i) <= nb_us)
+	{
+		if ((nb_us % i) == 0)
+		{
+			return (ft_find_next_prime(nb + 1));
+		}
 		i++;
-	return (i);
+	}	
+	return (nb);
 }
-
-void	ft_putstr(char *str)
+/*
+int main(void)
 {
-	write(1, str, ft_strlen(str));
-	write(1, "\n", 1);
+	printf("%d\n", ft_find_next_prime(189762924));
 }
-
-int	main(int argc, char **argv)
-{
-	(void) argc;
-	ft_putstr(argv[0]);
-	return (0);
-}
+*/

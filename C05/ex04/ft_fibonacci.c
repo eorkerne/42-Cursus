@@ -6,15 +6,12 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 09:30:43 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/15 09:58:20 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:50:35 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_fibonacci(int index)
 {
-	//printf("%d", index);
 	if (index < 0)
 		return (-1);
 	if (index >= 2)
@@ -22,7 +19,10 @@ int	ft_fibonacci(int index)
 	return (index);
 }
 
+/*
+#include <stdio.h>
 int	main(void)
 {
 	printf("%d\n", ft_fibonacci(5));
 }
+*/

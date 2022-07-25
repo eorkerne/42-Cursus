@@ -6,11 +6,9 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 15:29:37 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/19 09:54:48 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/07/20 19:30:12 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 int	ft_atoi(char *str)
 {
@@ -21,8 +19,8 @@ int	ft_atoi(char *str)
 	i = 0;
 	nb = 0;
 	sign = 1;
-	while (str[i] == ' ' && str[i] == '\f' && str[i] == '\r'
-		&& str[i] == '\n' && str[i] == '\t' && str[i] == '\v')
+	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\r'
+		|| str[i] == '\n' || str[i] == '\t' || str[i] == '\v')
 		i++;
 	while (str[i] == '+' || str[i] == '-')
 	{
@@ -37,12 +35,3 @@ int	ft_atoi(char *str)
 	}
 	return (sign * nb);
 }
-
-/*
-int main(void)
-{
-	char test[] = "---12345avc845";
-
-	printf("%d", ft_atoi(test));
-}
-*/

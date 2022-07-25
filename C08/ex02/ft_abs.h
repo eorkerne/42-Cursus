@@ -1,36 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 11:14:24 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/21 15:42:37 by maarroud         ###   ########.fr       */
+/*   Created: 2022/07/25 19:14:37 by maarroud          #+#    #+#             */
+/*   Updated: 2022/07/25 19:19:02 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-void	ft_putstr(char *str)
-{
-	write(1, str, ft_strlen(str));
-	write(1, "\n", 1);
-}
-
-int	main(int argc, char **argv)
-{
-	(void) argc;
-	ft_putstr(argv[0]);
-	return (0);
-}
+# define ABS(value) ((value) < 0 ? -value : value)
+#endif
