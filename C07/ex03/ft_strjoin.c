@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 19:29:40 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/25 19:43:08 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/07/26 09:59:04 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	return (new_str);
 }
 
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -147,3 +147,4 @@ int	main(void)
 	free(result);
 	//system("leaks a.out");
 }
+*/

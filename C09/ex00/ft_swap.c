@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stock_str.h                                     :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/25 19:31:33 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/25 19:36:20 by maarroud         ###   ########.fr       */
+/*   Created: 2022/07/12 15:15:20 by maarroud          #+#    #+#             */
+/*   Updated: 2022/07/26 14:36:14 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STOCK_STR_H
-# define FT_STOCK_STR_H
-
-struct	s_stock_str	*ft_strs_to_tab(int ac, char **av);
-void				ft_show_tab(struct s_stock_str *par);
-
-typedef struct s_stock_str
+void	ft_swap(int *a, int *b)
 {
-	int		size;
-	char	*str;
-	char	*copy;
-}	t_stock_str;
+	int	swp;
 
-#endif
+	swp = *a;
+	*a = *b;
+	*b = swp;
+}

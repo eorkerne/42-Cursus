@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 19:14:37 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/25 19:19:02 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/07/26 09:55:32 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,5 @@
 # define FT_ABS_H
 
 # define ABS(value) ((value) < 0 ? -value : value)
+
 #endif
