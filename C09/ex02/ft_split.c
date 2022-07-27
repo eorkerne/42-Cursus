@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 15:42:38 by maarroud          #+#    #+#             */
-/*   Updated: 2022/07/26 19:25:32 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/07/27 13:06:06 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	check_str_charset(char c, char *charset)
 
 	i = 0;
 	while (charset[i] && (c != charset[i]))
-		j++;
+		i++;
 	if (c == charset[i])
 		return (1);
 	else
@@ -91,8 +91,8 @@ char	**ft_split(char *str, char *charset)
 #include <stdio.h>
 int	main(void)
 {
-	char	str[] = "?abc!def?ghi?";
-	char	charset[] = "!?";
+	char	str[] = "Salut tu vas bien?";
+	char	charset[] = " ";
 	int		i;
 	char	**strs;
 	i = 0;
