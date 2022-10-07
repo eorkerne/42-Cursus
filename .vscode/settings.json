@@ -2,6 +2,10 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "stdio.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "fct.h": "c",
+        "ft_boolean.h": "c",
+        "libft.h": "c",
+        "sstream": "c"
     }
 }

@@ -1,173 +1,110 @@
-make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
-# GNU Make 3.82.90
-# Built for i686-pc-mingw32
-# Copyright (C) 1988-2012 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
- 
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
 
-# Make data base, printed on Fri Jul 08 22:25:53 2022
+# This program built for i386-apple-darwin11.3.0
+
+# Make data base, printed on Mon Oct  3 10:51:03 2022
 
 # Variables
 
 # automatic
-<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+<D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# environment
-SAN_DIR = C:\Program Files\SiSoftware\SiSoftware Sandra Lite 2012.SP5c
-# default
-.SHELLFLAGS := -c
-# environment
-GTK_BASEPATH = C:\Program Files (x86)\GtkSharp\2.12\
-# makefile
-MAKEFLAGS = Rrqp
-# environment
-VSCODE_LOG_NATIVE = false
 # automatic
-?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+?D = $(patsubst %/,%,$(dir $?))
 # automatic
-@D = $(patsubst %/,%,$(patsubst 
- %\,%,$(dir $@)))
-# environment
-HOMEDRIVE = C:
+@D = $(patsubst %/,%,$(dir $@))
 # automatic
 @F = $(notdir $@)
-# automatic
-^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
 # makefile
-CURDIR := c:/Users/Max/Desktop/PiscineMax-master
-# default
-SHELL := sh.exe
+CURDIR := /Users/maarroud/Documents/PiscineMax-master
+# makefile
+SHELL = /bin/sh
 # environment
-WINDIR = C:\Windows
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{},"_languagePackSupport":true}
-# environment
-FP_NO_HOST_CHECK = NO
-# environment
-VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
-# environment
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+_ = /usr/bin/make
 # makefile
 MAKEFILE_LIST := 
 # environment
-TMP = C:\Users\Max\AppData\Local\Temp
+VSCODE_CWD = /
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-PROGRAMW6432 = C:\Program Files
-# environment
-PROGRAMDATA = C:\ProgramData
-# environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-55b5350c-5884-4599-ba76-c775ad50adc3-sock
-# environment
-VSCODE_CWD = C:\Windows\system32
-# environment
-PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\MinGW\bin;C:\Program Files (x86)\Smart Projects\IsoBuster;C:\Program Files\Calibre2\;C:\Program Files\Git\cmd;;C:\Users\Max\AppData\Local\Programs\Microsoft VS Code\bin
-# environment
-COMMONPROGRAMW6432 = C:\Program Files\Common Files
-# environment
-PROCESSOR_ARCHITECTURE = x86
-# environment
-USERPROFILE = C:\Users\Max
-# environment
-ALLUSERSPROFILE = C:\ProgramData
-# environment
-VSCODE_LOG_STACK = false
-# environment
-NUMBER_OF_PROCESSORS = 4
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.5qusSMvKZU/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12428_WDPFTELPVBFSJNJB
-# environment
-VSCODE_PIPE_LOGGING = true
-# environment
-COMPUTERNAME = MAX-PC
-# environment
-PROGRAMFILES = C:\Program Files (x86)
-# environment
-ASL.LOG = Destination=file
+PWD = /Users/maarroud/Documents/PiscineMax-master
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
-USERNAME = Max
-# environment
-PUBLIC = C:\Users\Public
-# environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\Max\AppData\Roaming\Code\CachedData\30d9c6cd9483b2cc586687151bcbcd635f373630
+HOME = /Users/maarroud
+# default
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+VSCODE_CODE_CACHE_PATH = /Users/maarroud/Library/Application Support/Code/CachedData/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9
 # environment
-COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+LOGNAME = maarroud
 # environment
-LOGONSERVER = \\MAX-PC
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
 # environment
-USERDOMAIN = Max-PC
-# environment
-MAKELEVEL := 0
+XPC_FLAGS = 0x0
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
+# environment
+SHLVL = 1
 # default
-MAKE_VERSION := 3.82.90
+MAKE_VERSION := 3.81
+# environment
+USER = maarroud
 # makefile
 .DEFAULT_GOAL := 
-# environment
-PROGRAMFILES(X86) = C:\Program Files (x86)
 # automatic
-%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
-# environment
-LOCALAPPDATA = C:\Users\Max\AppData\Local
-# environment
-PSMODULEPATH = C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+%D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := make.exe
-# environment
-PROCESSOR_ARCHITEW6432 = AMD64
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
+# environment
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n0009xb0002g_r/T/
 # automatic
 *F = $(notdir $*)
 # environment
-PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 26 Stepping 5, GenuineIntel
+VSCODE_IPC_HOOK = /Users/maarroud/Library/Application Support/Code/1.69.0-main.sock
 # environment
-OS = Windows_NT
-# environment
-VSCODE_IPC_HOOK = \\.\pipe\3272085bfe44d36a6b14e902bdaa7090-1.68.1-main-sock
-# environment
-HOMEPATH = \Users\Max
-# environment
-COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
-# environment
-PROMPT = $P$G
+MallocNanoZone = 0
+# makefile
+MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # automatic
-*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+*D = $(patsubst %/,%,$(dir $*))
 # environment
-SYSTEMROOT = C:\Windows
+XPC_SERVICE_NAME = com.microsoft.VSCode.2292
 # automatic
-+D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
++D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
-APPDATA = C:\Users\Max\AppData\Roaming
-# environment
-TEMP = C:\Users\Max\AppData\Local\Temp
-# environment
-COMSPEC = C:\Windows\system32\cmd.exe
+__CF_USER_TEXT_ENCODING = 0x13D58:0x0:0x0
 # default
 MAKEFILES := 
 # automatic
@@ -178,51 +115,26 @@ LC_ALL = C
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# environment
-SYSTEMDRIVE = C:
-# environment
-SESSIONNAME = Console
-# environment
-PROCESSOR_REVISION = 1a05
-# environment
-VS140COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\
 # default
-.INCLUDE_DIRS = C:/MinGW/include
-# default
-.RECIPEPREFIX := 
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-PROCESSOR_LEVEL = 6
-# environment
-VSCODE_PID = 12428
+VSCODE_PID = 84182
 # variable set hash-table stats:
-# Load=92/1024=9%, Rehash=0, Collisions=11/108=10%
+# Load=56/1024=5%, Rehash=0, Collisions=1/77=1%
 
 # Pattern-specific Variable Values
 
-# No pattern-spe 
-cific variable values.
+# No pattern-specific variable values.
 
 # Directories
 
-# : could not be stat'd.
-# C:\ProgramData\Oracle\Java\javapath (key C:/ProgramData/Oracle/Java/javapath, mtime 1529424634): 5 files, no impossibilities.
-# C:\Program Files (x86)\GtkSharp\2.12\bin: could not be stat'd.
-# C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1474534808): 23 files, no impossibilities.
-# . (key c:/Users/Max/Desktop/PiscineMax-master, mtime 1656695364): 17 files, no impossibilities.
-# C:\Program Files (x86)\Smart Projects\IsoBuster: could not be stat'd.
-# C:\Program Files (x86)\Common Files\Oracle\Java\javapath (key C:/Program Files (x86)/Common Files/Oracle/Java/javapath, mtime 1598030400): 5 files, no impossibilities.
-# C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1656259299): 8 files, no impossibilities.
-# C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common (key C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common, mtime 1473886664): 10 files, no impossibilities.
-# C:\MinGW\bin (key C:/MinGW/bin, mtime 1497098350): 147 files, no impossibilities.
-# C:\Program Files\Calibre2\ (key C:/Program Files/Calibre2/, mtime 1564422563): 24 files, no impossibilities.
-# C:\Windows (key C:/Windows, mtime 1501692784): 105 files, no impossibilities.
-# C:\Users\Max\AppData\Local\Programs\Microsoft VS Code\bin (key C:/Users/Max/AppData/Local/Programs/Microsoft VS Code/bin, mtime 1656258525): 4 files, no impossibilities.
-# C:\Windows\System32\Wbem (key C:/Windows/System32/Wbem, mtime 1501102628): 157 files, no impossibilities.
-# C:\Windows\system32 (key C:/Windows/system32, mtime 1657233971): 2535 files, no impossibilities.
+# . (device 16777229, inode 6612): 27 files, no impossibilities.
 
-# 3040 files, no impossibilities in 15 directories.
+# 27 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -232,10 +144,12 @@ cific variable values.
 
 # Not a target:
 all:
-#  Command line target.
+#  Command-line target.
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 .SUFFIXES:
@@ -245,17 +159,23 @@ all:
 
 # Not a target:
 Makefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 makefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 .DEFAULT:
@@ -265,29 +185,29 @@ makefile:
 
 # Not a target:
 GNUmakefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/17=0%
 # VPATH Search Paths
 
-# No 'vpath' search paths.
+# No `vpath' search paths.
 
-# No general ('VPATH' variable) search path.
+# No general (`VPATH' variable) search path.
 
-# strcache buffers: 5 (3) / strings = 3020 / storage = 40576 B / avg = 13 B
-# current buf: size = 8174 B / used = 7925 B / count = 574 / avg = 13 B
-# other used: total = 32402 B / count = 2446 / avg = 13 B
-# other free: total = 45 B / max = 17 B / min = 3 B / avg = 11 B
+# # of strings in strcache: 0
+# # of strcache buffers: 0
+# strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
+# strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# strcache performance: lookups = 3063 / hit rate = 1%
-# hash-table stats:
-# Load=3020/8192=37%, Rehash=0, Collisions=814/3063=27%
-# Finished Make data base on Fri Jul 08 22:25:53 2022
+# Finished Make data base on Mon Oct  3 10:51:03 2022
 
  
-make.exe: *** No rule to make target 'all'.  Stop.
+make: *** No rule to make target `all'.  Stop.
 
