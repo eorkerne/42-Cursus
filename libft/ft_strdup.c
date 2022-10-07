@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 14:19:06 by maarroud          #+#    #+#             */
-/*   Updated: 2022/10/07 17:08:08 by maarroud         ###   ########.fr       */
+/*   Created: 2022/10/07 16:56:09 by maarroud          #+#    #+#             */
+/*   Updated: 2022/10/07 17:08:34 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strdup(const char *s1)
 {
-	int	sign;
-	int	nb;
-	int	i;
+	char	*cpy;
+	int		i;
 
+	cpy = malloc(sizeof(char) * ft_strlen(s1) + 1);
 	i = 0;
-	nb = 0;
-	sign = 1;
-	if (str == (void *)0)
+	if (!cpy)
 		return (0);
-	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\r'
-		|| str[i] == '\n' || str[i] == '\t' || str[i] == '\v')
-		i++;
-	if (str[i + 1] == '+' || str[i + 1] == '-' )
-		return (0);
-	if (str[i] == '-')
-		sign = sign * -1;
-	while (str[i] == '+' || str[i] == '-')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	while (s1[i])
 	{
-		nb = nb * 10 + (str[i] - 48);
+		cpy[i] = s1[i];
 		i++;
 	}
-	return (sign * nb);
+	cpy[i] = '\0';
+	return (cpy);
 }
