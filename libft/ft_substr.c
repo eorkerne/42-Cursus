@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:15:12 by maarroud          #+#    #+#             */
-/*   Updated: 2022/10/07 18:15:12 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/10/08 12:38:46 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,35 +16,37 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*newstr;
 	size_t	i;
-	size_t	newlen;
 
-	if (len > ft_strlen(s) - start)
-	{
-		newlen = (ft_strlen(s) - start);
-	}
+	if (ft_strlen(s) < len)
+		len = ft_strlen(s);
+	if (len < start)
+		newstr = malloc(sizeof(char) * (len + 1));
 	else
-		newlen = len;
-	// if (newlen > len)
-	// 	return (NULL);
-	if (len == 0 || !s)
+		newstr = malloc(sizeof(char) * (len + 1) - start);
+	if (!newstr || !s)
 		return (NULL);
-	newstr = malloc(sizeof(char) * newlen);
-	if (!newstr)
-		return (NULL);
+	if (ft_strlen(s) < start)
+	{
+		newstr[0] = '\0';
+		return (newstr);
+	}
 	i = 0;
-	while (s[start] != '\0' && start < len)
+	while (s[start] && i < len)
 	{
 		newstr[i] = s[start];
 		i++;
 		start++;
 	}
+	newstr[i] = '\0';
 	return (newstr);
 }
-#include <stdio.h>
 
-int	main(void)
-{
+// #include <stdio.h>
+// #include <string.h>
 
-	char * s = ft_substr("tripouille", 1, 1);
-	printf("%s\n", s);
-}
+// int	main(void)
+// {
+// 	char	*str = strdup("012345678");
+// 	char	*s = ft_substr(str, 5, 15);
+// 	printf("%s\n", s);
+// }
