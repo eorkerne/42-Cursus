@@ -6,7 +6,7 @@
 #    By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 13:50:31 by maarroud          #+#    #+#              #
-#    Updated: 2022/10/08 14:03:44 by maarroud         ###   ########.fr        #
+#    Updated: 2022/10/12 11:50:55 by maarroud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRCS_P1 = ft_isalpha.c ft_isdigit.c \
 	ft_atoi.c ft_calloc.c \
 	ft_strdup.c ft_substr.c \
 	ft_strjoin.c ft_strtrim.c \
+	ft_split.c
 	
 
 

@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:32:40 by maarroud          #+#    #+#             */
-/*   Updated: 2022/10/11 13:43:47 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/10/12 11:41:52 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	count;
 
+	if (!s1 || !s2)
+		return (NULL);
 	newlen = ft_strlen(s1) + ft_strlen(s2);
 	newstr = malloc(sizeof(char) * newlen + 1);
 	if (!newstr)
@@ -34,7 +36,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	while (s2[i])
 		newstr[count++] = s2[i++];
-
 	newstr[count] = '\0';
 	return (newstr);
 }

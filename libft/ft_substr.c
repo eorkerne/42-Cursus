@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:15:12 by maarroud          #+#    #+#             */
-/*   Updated: 2022/10/08 12:38:46 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/10/12 14:57:02 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,24 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*newstr;
+	char	*str;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	if (ft_strlen(s) < len)
 		len = ft_strlen(s);
-	if (len < start)
-		newstr = malloc(sizeof(char) * (len + 1));
-	else
-		newstr = malloc(sizeof(char) * (len + 1) - start);
-	if (!newstr || !s)
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
-	if (ft_strlen(s) < start)
+	if (start > (unsigned int)ft_strlen(s))
 	{
-		newstr[0] = '\0';
-		return (newstr);
+		str[0] = '\0';
+		return (str);
 	}
 	i = 0;
-	while (s[start] && i < len)
-	{
-		newstr[i] = s[start];
-		i++;
-		start++;
-	}
-	newstr[i] = '\0';
-	return (newstr);
+	while (s[start] && (i < len))
+		str[i++] = s[start++];
+	str[i] = '\0';
+	return (str);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int	main(void)
-// {
-// 	char	*str = strdup("012345678");
-// 	char	*s = ft_substr(str, 5, 15);
-// 	printf("%s\n", s);
-// }

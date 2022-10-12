@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 14:54:32 by maarroud          #+#    #+#             */
-/*   Updated: 2022/10/06 19:33:46 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/10/12 09:58:01 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	j = 0;
-	if (!src || !dst)
-		return (0);
 	i = ft_strlen(src);
 	if (dstsize <= 0)
 		return (i);
