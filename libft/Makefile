@@ -6,7 +6,7 @@
 #    By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 13:50:31 by maarroud          #+#    #+#              #
-#    Updated: 2022/10/12 11:50:55 by maarroud         ###   ########.fr        #
+#    Updated: 2022/10/13 16:39:23 by maarroud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC		= gcc
 FLAGS	= -Wall -Wextra -Werror
 LIB		= ar rcs
 
-SRCS_P1 = ft_isalpha.c ft_isdigit.c \
+SRCS = ft_isalpha.c ft_isdigit.c \
 	ft_isalnum.c ft_isascii.c \
 	ft_isprint.c ft_strlen.c \
 	ft_memset.c ft_bzero.c \
@@ -28,11 +28,15 @@ SRCS_P1 = ft_isalpha.c ft_isdigit.c \
 	ft_atoi.c ft_calloc.c \
 	ft_strdup.c ft_substr.c \
 	ft_strjoin.c ft_strtrim.c \
-	ft_split.c
-	
+	ft_split.c ft_itoa.c \
+	ft_strmapi.c ft_striteri.c \
+	ft_putchar_fd.c ft_putstr_fd.c \
+	ft_putendl_fd.c ft_putnbr_fd.c \
+
+SRCS_B = ft_lstnew_bonus.c
 
 
-OBJS_P1 = $(SRCS_P1:.c=.o)
+OBJS = $(SRCS:.c=.o)
 OBJS_B	= $(SRCS_B:.c=.o)
 
 all: $(NAME)
@@ -40,7 +44,7 @@ all: $(NAME)
 %.o: %.c
 	$(CC) $(FLAGS) -o $@ -c $<
 
-$(NAME): $(OBJS_P1) $(OBJS_P2)
+$(NAME): $(OBJS)
 	$(LIB) $@ $^
 
 bonus:		$(OBJS_B)
@@ -50,7 +54,7 @@ norm:
 	norminette
 
 clean:
-	rm -f $(OBJS_P1) $(OBJS_P2) $(OBJS_B)
+	rm -f $(OBJS) $(OBJS_B)
 
 fclean: clean
 	rm -f $(NAME)

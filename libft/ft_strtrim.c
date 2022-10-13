@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:42:57 by maarroud          #+#    #+#             */
-/*   Updated: 2022/10/12 15:46:58 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/10/13 13:14:53 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	while (check_ismatch(s1[start], set) == 1)
+	while (s1[start + 1] != '\0' && check_ismatch(s1[start], set) == 1)
 		start++;
 	if (start == end)
 	{

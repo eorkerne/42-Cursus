@@ -1,50 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 17:15:12 by maarroud          #+#    #+#             */
-/*   Updated: 2022/10/13 13:27:28 by maarroud         ###   ########.fr       */
+/*   Created: 2022/10/13 12:18:18 by maarroud          #+#    #+#             */
+/*   Updated: 2022/10/13 12:41:34 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_fslen(char const *s, unsigned int start)
+static int	ft_nblen(long int nbr)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (start < ft_strlen(s))
+	if (nbr == 0)
+		return (1);
+	if (nbr < 0)
 	{
-		start++;
+		nbr *= -1;
+		i++;
+	}
+	while (nbr != 0)
+	{
+		nbr /= 10;
 		i++;
 	}
 	return (i);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_itoa(int n)
 {
-	char	*str;
-	size_t	i;
+	long int	nbr;
+	char		*str;
+	size_t		len;
 
-	if (!s)
-		return (NULL);
-	if (ft_strlen(s) < len)
-		len = ft_fslen(s, start);
-	str = malloc(sizeof(char) * (len + 1));
+	nbr = n;
+	len = ft_nblen(nbr);
+	str = malloc(sizeof(char) * len + 1);
 	if (!str)
 		return (NULL);
-	if (start > (unsigned int)ft_strlen(s))
+	str[len--] = '\0';
+	if (nbr == 0)
+		str[len] = '0';
+	if (nbr < 0)
 	{
-		str[0] = '\0';
-		return (str);
+		str[0] = '-';
+		nbr *= -1;
 	}
-	i = 0;
-	while (s[start] && (i < len))
-		str[i++] = s[start++];
-	str[i] = '\0';
+	while (nbr > 0)
+	{
+		str[len--] = nbr % 10 + '0';
+		nbr /= 10;
+	}
 	return (str);
 }
