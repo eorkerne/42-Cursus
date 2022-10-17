@@ -6,7 +6,7 @@
 #    By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 13:50:31 by maarroud          #+#    #+#              #
-#    Updated: 2022/10/13 16:39:23 by maarroud         ###   ########.fr        #
+#    Updated: 2022/10/17 17:17:13 by maarroud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,10 @@ SRCS = ft_isalpha.c ft_isdigit.c \
 	ft_putchar_fd.c ft_putstr_fd.c \
 	ft_putendl_fd.c ft_putnbr_fd.c \
 
-SRCS_B = ft_lstnew_bonus.c
+SRCS_B = ft_lstnew.c ft_lstadd_front.c \
+	ft_lstsize.c ft_lstlast.c \
+	ft_lstadd_back.c ft_lstdelone.c \
+	ft_lstclear.c
 
 
 OBJS = $(SRCS:.c=.o)
