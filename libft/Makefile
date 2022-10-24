@@ -6,7 +6,7 @@
 #    By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 13:50:31 by maarroud          #+#    #+#              #
-#    Updated: 2022/10/24 18:28:14 by maarroud         ###   ########.fr        #
+#    Updated: 2022/10/24 18:34:47 by maarroud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,4 +65,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY:	all clean fclean re
+.PHONY:	all clean fclean re norm
