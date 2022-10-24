@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 11:45:16 by maarroud          #+#    #+#             */
-/*   Updated: 2022/10/12 15:08:47 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:44:02 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,20 @@ static int	word_count(char const *s, char c)
 	return (wordc);
 }
 
+static char	**ft_freesubstring(char **strs)
+{
+	int	j;
+
+	j = 0;
+	while (strs[j])
+	{
+		free(strs[j]);
+		j++;
+	}
+	free(strs);
+	return (NULL);
+}
+
 static char	**ft_split2(char const *s, char c)
 {	
 	char	**strs;
@@ -59,16 +73,16 @@ static char	**ft_split2(char const *s, char c)
 	k = 0;
 	strs = malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (!strs)
-		return (0);
+		return (NULL);
 	while (s[i] && j < word_count(s, c))
 	{
 		while (s[i] && s[i] == c)
 			i++;
 		strs[j] = malloc(sizeof(char) * (ft_wordlen(s, c, i) + 1));
 		if (!strs[j])
-			return (0);
+			return (ft_freesubstring(strs));
 		while (s[i] && s[i] != c)
-			strs[j][k++] = s[i++];
+				strs[j][k++] = s[i++];
 		strs[j++][k] = '\0';
 		k = 0;
 	}
@@ -83,5 +97,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	strs = ft_split2(s, c);
+	if (!strs)
+		return (NULL);
 	return (strs);
 }

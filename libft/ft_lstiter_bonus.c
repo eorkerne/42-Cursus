@@ -1,41 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 11:18:58 by maarroud          #+#    #+#             */
-/*   Updated: 2022/10/17 19:25:41 by maarroud         ###   ########.fr       */
+/*   Created: 2022/10/20 18:10:40 by maarroud          #+#    #+#             */
+/*   Updated: 2022/10/20 18:19:57 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst)
-		return (NULL);
-	else
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		while (lst->next)
-			lst = lst->next;
+		f(lst->content);
+		lst = lst->next;
 	}
-	return (lst);
 }
-
-// void test()
-// {
-// 	t_list *list;
-
-// 	char *s1 = malloc(10);
-// 	list = ft_lstnew(s1);
-// 	ft_lstlast(list);
-// }
-
-// // int main()
-// // {
-// // 	test();
-// // 	system("leaks a.out");
-// // 	return (0);
-// // }

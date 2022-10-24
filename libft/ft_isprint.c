@@ -6,11 +6,9 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 12:05:52 by maarroud          #+#    #+#             */
-/*   Updated: 2022/10/06 21:23:12 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/10/20 12:37:13 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {
