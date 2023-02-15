@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:47:41 by maarroud          #+#    #+#             */
-/*   Updated: 2022/11/07 15:48:52 by maarroud         ###   ########.fr       */
+/*   Updated: 2023/02/15 15:49:02 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ int	ft_conversion(const char *format, int i, va_list args)
 		ret += ft_args_is_str(args);
 	if (format[i] == 'p')
 		ret += ft_address_pointer(args);
-	else if (format[i] == 'd')
-		ret += ft_args_is_dec(args);
-	else if (format[i] == 'i')
+	else if (format[i] == 'i' || format[i] == 'd')
 		ret += ft_args_is_base_ten(args);
 	else if (format[i] == 'u')
 		ret += ft_args_is_unsigned(args);

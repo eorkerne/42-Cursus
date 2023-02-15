@@ -6,17 +6,15 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:59:18 by maarroud          #+#    #+#             */
-/*   Updated: 2023/02/15 11:19:43 by maarroud         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:32:23 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
 
-int		ft_args_is_dec(va_list args);
 int		ft_args_is_unsigned(va_list args);
 int		ft_args_is_upc_hexa(va_list args);
 int		ft_args_is_str(va_list args);
