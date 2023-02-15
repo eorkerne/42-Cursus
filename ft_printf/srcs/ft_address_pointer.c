@@ -6,28 +6,38 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:50:59 by maarroud          #+#    #+#             */
-/*   Updated: 2022/11/03 17:10:41 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/11/07 15:00:50 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_puthexalowc(unsigned int nb)
+static void	ft_puthexalowc(unsigned long int nb)
 {
 	char	*base;
-	int		i;
 
-	i = 0;
 	base = "0123456789abcdef";
-	if (nb > 16)
+	if (nb < 16)
 	{
-		ft_puthexalowc(nb / 16);
 		ft_putchar(base[nb % 16]);
-		i++;
 	}
 	else
 	{
-		ft_putchar(base[nb % 16]);
+		ft_puthexalowc(nb / 16);
+		ft_puthexalowc(nb % 16);
+	}
+}
+
+static int	ft_count(unsigned long int nb)
+{
+	int	i;
+
+	if (nb == 0)
+		return (1);
+	i = 0;
+	while (nb != 0)
+	{
+		nb = nb / 16;
 		i++;
 	}
 	return (i);
@@ -35,12 +45,13 @@ static int	ft_puthexalowc(unsigned int nb)
 
 int	ft_address_pointer(va_list args)
 {
-	int				ret;
-	unsigned int	p;
+	int					ret;
+	unsigned long int	p;
 
 	ret = 0;
 	p = va_arg(args, unsigned long int);
 	ret += ft_putstr("0x");
-	ret += ft_puthexalowc(p);
+	ft_puthexalowc(p);
+	ret += ft_count(p);
 	return (ret);
 }

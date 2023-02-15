@@ -6,6 +6,8 @@
         "fct.h": "c",
         "ft_boolean.h": "c",
         "libft.h": "c",
-        "sstream": "c"
+        "sstream": "c",
+        "chrono": "cpp",
+        "ios": "cpp"
     }
 }

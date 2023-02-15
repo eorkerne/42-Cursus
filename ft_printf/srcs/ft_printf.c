@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:24:43 by maarroud          #+#    #+#             */
-/*   Updated: 2022/11/03 16:49:00 by maarroud         ###   ########.fr       */
+/*   Updated: 2022/11/07 16:06:51 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_printf(const char *format, ...)
 	int		ret;
 	va_list	args;
 
+	if (!format)
+		return (-1);
 	i = 0;
 	ret = 0;
 	va_start(args, format);
@@ -25,14 +27,13 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == 0)
+				break ;
 			ret += ft_conversion(format, i, args);
 			i += 2;
 		}
 		else
-		{
-			ret += write(1, &format[i], 1);
-			i++;
-		}
+			ret += write(1, &format[i++], 1);
 	}
 	va_end(args);
 	return (ret);
