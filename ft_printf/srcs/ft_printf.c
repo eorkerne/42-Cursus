@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:24:43 by maarroud          #+#    #+#             */
-/*   Updated: 2023/02/15 12:54:31 by maarroud         ###   ########.fr       */
+/*   Updated: 2023/02/20 10:15:44 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == 0)
+			if (!format[i + 1])
 				break ;
 			ret += ft_conversion(format, i, args);
 			i += 2;

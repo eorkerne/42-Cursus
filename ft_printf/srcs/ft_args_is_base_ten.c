@@ -6,13 +6,13 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:51:20 by maarroud          #+#    #+#             */
-/*   Updated: 2023/02/15 15:58:23 by maarroud         ###   ########.fr       */
+/*   Updated: 2023/02/20 09:58:40 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr(int n)
+static void	ft_putnbr(int n)
 {
 	if (n == -2147483648)
 		write(1, "-2147483648", 11);
