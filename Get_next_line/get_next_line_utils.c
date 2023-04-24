@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_args_is_char.c                                  :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 12:51:27 by maarroud          #+#    #+#             */
-/*   Updated: 2023/02/27 14:18:48 by maarroud         ###   ########.fr       */
+/*   Created: 2023/04/24 13:29:21 by maarroud          #+#    #+#             */
+/*   Updated: 2023/04/24 15:07:25 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "get_next_line.h"
 
-int	ft_args_is_char(va_list args)
+int	found_newline(t_list *stash)
 {
-	int		ret;
-	char	p;
-
-	ret = 0;
-	p = va_arg(args, int);
-	ret += ft_putchar((char)p);
-	return (ret);
+	int	i;
+	t_list	*content;
 }

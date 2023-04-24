@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:52:53 by maarroud          #+#    #+#             */
-/*   Updated: 2022/11/07 15:06:33 by maarroud         ###   ########.fr       */
+/*   Updated: 2023/02/27 14:54:12 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 static void	ft_putnbr(unsigned int n)
 {
-	int		i;
-
-	i = 0;
 	if (n < 10)
 		ft_putchar(48 + n);
 	else
