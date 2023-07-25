@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 13:29:21 by maarroud          #+#    #+#             */
-/*   Updated: 2023/07/25 13:19:02 by maarroud         ###   ########.fr       */
+/*   Updated: 2023/07/25 17:29:52 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	ft_strlen_return(char *buffer)
 	i = 0;
 	while (buffer && buffer[i] != '\n' && buffer[i])
 		i++;
+	if (buffer && buffer[i] == '\n')
+		i++;
 	return (i);
 }
 
@@ -40,7 +42,9 @@ char	*add_buffer(char *line, char *buffer)
 
 	to_free = line;
 	i = 0;
-	res = malloc(ft_strlen(line) + ft_strlen_return(buffer) + 2);
+	if (buffer[0] == 0)
+		return (line);
+	res = malloc(ft_strlen(line) + ft_strlen_return(buffer) + 1);
 	if (!res)
 		return (NULL);
 	while (line && *line)
@@ -48,8 +52,10 @@ char	*add_buffer(char *line, char *buffer)
 	while (buffer && *buffer && *buffer != '\n')
 	{
 		res[i++] = *buffer++;
+		res[i] = 0;
+		if (*buffer == '\n')
+			res[i++] = *buffer;
 	}
-	res[i++] = *buffer;
 	res[i] = 0;
 	if (to_free)
 		free(to_free);
@@ -61,18 +67,27 @@ int	is_endl(char *buffer)
 	int	i;
 
 	i = 0;
-	while (buffer && buffer[i] != '\n' && buffer[i])
+	while (buffer && buffer[i] && buffer[i] != '\n')
 		i++;
 	return (buffer[i]);
 }
 
 char	*readed_and_free(int readed, char *buffer, char *line, int fd)
 {
+	int	i;
+
 	while (readed)
 	{
 		readed = read(fd, buffer, BUFFER_SIZE);
-		line = add_buffer(line, buffer);
-		if (readed == 0 && ft_strlen(line) == 0)
+		if (readed)
+			line = add_buffer(line, buffer);
+		if (!is_endl(buffer))
+		{
+			i = -1;
+			while (++i < BUFFER_SIZE + 1)
+				buffer[i] = 0;
+		}
+		if (readed == 0)
 		{
 			free(line);
 			return (NULL);

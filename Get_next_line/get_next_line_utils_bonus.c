@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 13:29:21 by maarroud          #+#    #+#             */
-/*   Updated: 2023/07/21 22:10:49 by maarroud         ###   ########.fr       */
+/*   Updated: 2023/07/25 17:28:15 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,20 @@ int	is_endl(char *buffer)
 
 char	*readed_and_free(int readed, char *buffer, char *line, int fd)
 {
+	int	i;
+	
 	while (readed)
 	{
 		readed = read(fd, buffer, BUFFER_SIZE);
-		line = add_buffer(line, buffer);
-		if (readed == 0 && ft_strlen(line) == 0)
+		if (readed)
+			line = add_buffer(line, buffer);
+		if (!is_endl(buffer))
+		{
+			i = -1;
+			while (++i < BUFFER_SIZE + 1)
+				buffer[i] = 0;
+		}
+		if (readed == 0)
 		{
 			free(line);
 			return (NULL);

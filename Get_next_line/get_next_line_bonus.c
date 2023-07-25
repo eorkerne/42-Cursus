@@ -6,11 +6,11 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 13:29:14 by maarroud          #+#    #+#             */
-/*   Updated: 2023/07/21 21:25:00 by maarroud         ###   ########.fr       */
+/*   Updated: 2023/07/25 14:26:14 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*get_next_line(int fd)
 {
