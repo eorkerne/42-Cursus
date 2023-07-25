@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 13:29:14 by maarroud          #+#    #+#             */
-/*   Updated: 2023/07/25 10:58:41 by maarroud         ###   ########.fr       */
+/*   Updated: 2023/07/25 13:19:16 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ char	*get_next_line(int fd)
 	line = NULL;
 	if (buffer[fd][0] != 0)
 	{
-		endl_pos = ft_strlen_return(buffer[fd]) + 1;
 		i = 0;
+		endl_pos = ft_strlen_return(buffer[fd]) + 1;
 		while (buffer[fd][endl_pos + i])
 		{
 			buffer[fd][i] = buffer[fd][endl_pos + i];

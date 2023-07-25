@@ -6,7 +6,7 @@
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 13:29:21 by maarroud          #+#    #+#             */
-/*   Updated: 2023/07/25 11:00:03 by maarroud         ###   ########.fr       */
+/*   Updated: 2023/07/25 13:19:02 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,10 @@ char	*add_buffer(char *line, char *buffer)
 	if (!res)
 		return (NULL);
 	while (line && *line)
-	{
-		res[i++] = *line;
-		line++;
-	}
+		res[i++] = *line++;
 	while (buffer && *buffer && *buffer != '\n')
 	{
-		printf("buffer = [%s] \n", buffer);
-		res[i++] = *buffer;
-		buffer++;
+		res[i++] = *buffer++;
 	}
 	res[i++] = *buffer;
 	res[i] = 0;
