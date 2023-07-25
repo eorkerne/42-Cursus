@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maarroud <maarroud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 13:29:21 by maarroud          #+#    #+#             */
-/*   Updated: 2023/07/25 11:00:03 by maarroud         ###   ########.fr       */
+/*   Updated: 2023/07/21 22:10:49 by maarroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ char	*add_buffer(char *line, char *buffer)
 	to_free = line;
 	i = 0;
 	res = malloc(ft_strlen(line) + ft_strlen_return(buffer) + 2);
-	if (!res)
-		return (NULL);
 	while (line && *line)
 	{
 		res[i++] = *line;
@@ -50,7 +48,6 @@ char	*add_buffer(char *line, char *buffer)
 	}
 	while (buffer && *buffer && *buffer != '\n')
 	{
-		printf("buffer = [%s] \n", buffer);
 		res[i++] = *buffer;
 		buffer++;
 	}
